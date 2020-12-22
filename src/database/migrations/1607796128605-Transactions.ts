@@ -20,7 +20,9 @@ export class Transactions1607796128605 implements MigrationInterface {
             },
             {
               name: 'value',
-              type: 'number',
+              type: 'decimal',
+              precision: 10,
+              scale: 2
             },
             {
               name: 'category_id',
