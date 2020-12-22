@@ -15,7 +15,7 @@ export class Transactions1607796128605 implements MigrationInterface {
               default: 'uuid_generate_v4()',
             },
             {
-              name: 'type',
+              name: 'title',
               type: 'varchar',
             },
             {
@@ -25,8 +25,12 @@ export class Transactions1607796128605 implements MigrationInterface {
               scale: 2
             },
             {
+              name: 'type',
+              type: 'varchar',
+            },
+            {
               name: 'category_id',
-              type: 'string',
+              type: 'uuid',
             },
             {
               name: 'created_at',
