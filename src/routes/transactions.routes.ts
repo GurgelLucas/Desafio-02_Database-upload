@@ -18,7 +18,7 @@ transactionsRouter.post('/', async (request, response) => {
   const { title, value, type, category } = request.body;
   const createTransaction = new CreateTransactionService();
   const transaction = await createTransaction.execute({ title, value, type, category });
-  return response.status(200);
+  return response.status(200).json(transaction);
 });
 
 transactionsRouter.delete('/:id', async (request, response) => {
